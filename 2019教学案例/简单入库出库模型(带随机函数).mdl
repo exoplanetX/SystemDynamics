@@ -1,0 +1,89 @@
+{UTF-8}
+INFLOW=
+	IF THEN ELSE(STOCK<15, 10*PULSE( Time , 1 ) , 0 )
+	~	
+	~		|
+
+OUTFLOW=
+	RANDOM NORMAL(2, 10 , 8 , 1 , 12 )
+	~	
+	~		|
+
+STOCK= INTEG (
+	INFLOW-OUTFLOW,
+		20
+		)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Day
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Day
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Day [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Day [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,STOCK,544,274,40,24,3,3,0,0,0,0,0,0
+12,2,48,296,271,10,8,0,3,0,0,-1,0,0,0
+1,3,5,1,4,0,0,22,0,0,0,-1--1--1,,1|(456,271)|
+1,4,5,2,100,0,0,22,0,0,0,-1--1--1,,1|(351,271)|
+11,5,0,402,271,6,10,34,3,0,0,1,0,0,0
+10,6,INFLOW,402,298,33,13,40,3,0,0,-1,0,0,0
+12,7,48,758,272,10,8,0,3,0,0,-1,0,0,0
+1,8,10,7,4,0,0,22,0,0,0,-1--1--1,,1|(711,272)|
+1,9,10,1,100,0,0,22,0,0,0,-1--1--1,,1|(623,272)|
+11,10,0,668,272,6,10,34,3,0,0,1,0,0,0
+10,11,OUTFLOW,668,300,41,13,40,3,0,0,-1,0,0,0
+1,12,1,6,1,0,0,0,0,64,0,-1--1--1,,1|(482,377)|
+10,13,Time,275,163,26,13,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|0||128-128-128
+1,14,13,5,0,0,0,0,0,64,0,-1--1--1,,1|(338,216)|
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 2
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,3
+///---\\\
+:L<%^E!@
+1:Current.vdf
+9:Current
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:0,
+34:0,
+4:Time
+5:INFLOW
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:4
+41:0
+42:1
+24:0
+25:100
+26:100
