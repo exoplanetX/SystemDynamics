@@ -10,3 +10,5 @@ vensim软件下载链接：http://vensim.com/download/
 
 另外，采购了教材的同学可以直接使用图书附带光盘中的软件，其中包括了以上两个软件较早版本。
 
+# 其他辅助软件 
+github desktop：可以自建github代码库，通过右上角的fork将本项目所有内容取走，或star关注本项目库。 下载https://desktop.github.com/ 与计算机本地同步。
